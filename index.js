@@ -69,3 +69,13 @@ console.log('Math.max ::', Math.max(2, 3, 4, 5));
 console.log('Math.min ::', Math.min(2, 3, 4, 5));
 
 // Date
+
+var today = new Date();
+console.log(today);
+
+console.log('from epoch website', '1667019026'.length);
+console.log('getTime', new Date().getTime());
+console.log('getDate', new Date().getDate());
+console.log('getMonth', new Date().getMonth()); // coz it always starts from 0 to 11
+
+console.log('getTime', (new Date().getTime() + '').length);
