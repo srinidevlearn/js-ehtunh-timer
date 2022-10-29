@@ -68,6 +68,8 @@ console.log('Math.round ::', Math.round(2.2));
 console.log('Math.max ::', Math.max(2, 3, 4, 5));
 console.log('Math.min ::', Math.min(2, 3, 4, 5));
 
+console.log('Math.pow ::', Math.pow(2, 3));
+
 // Date
 
 var today = new Date(new Date().setTime(1634428800000));
