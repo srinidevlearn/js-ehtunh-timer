@@ -69,6 +69,13 @@ console.log('Math.max ::', Math.max(2, 3, 4, 5));
 console.log('Math.min ::', Math.min(2, 3, 4, 5));
 
 console.log('Math.pow ::', Math.pow(2, 3));
+console.clear();
+
+console.log('Math.abs ::', Math.abs(-5)); // negative to positive numbers
+
+console.log('Math.sign ::', Math.sign(-5)); // negative numbers -1
+console.log('Math.sign ::', Math.sign(5)); // positive numbers 1
+console.log('Math.sign ::', Math.sign(0)); // zero 0;
 
 // Date
 
@@ -117,3 +124,10 @@ let maxDate = Math.max(
 console.log(new Date(maxDate).toLocaleDateString('')); // m/d/y
 
 console.log(new Date(maxDate).toLocaleDateString('en-GB')); // d/m/y
+
+// TODO 
+// isdateRange 
+// StartRange->'2022-03-01', endRange->'2022-10-17'
+// input->'2022-05-01'
+
+
