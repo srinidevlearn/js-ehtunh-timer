@@ -70,12 +70,48 @@ console.log('Math.min ::', Math.min(2, 3, 4, 5));
 
 // Date
 
-var today = new Date();
+var today = new Date(new Date().setTime(1634428800000));
 console.log(today);
 
 console.log('from epoch website', '1667019026'.length);
 console.log('getTime', new Date().getTime());
 console.log('getDate', new Date().getDate());
 console.log('getMonth', new Date().getMonth()); // coz it always starts from 0 to 11
+console.log('getFullYear', new Date().getFullYear()); // coz it always starts from 0 to 11
+console.log('getHours', new Date().getHours()); // coz it always starts from 0 to 11
+console.log('toLocaleDateString', new Date().toLocaleDateString());
+console.log('toLocaleTimeString', new Date().toLocaleTimeString());
+
+console.log('toIsoString', new Date().toISOString());
+
+console.log('from epoch website', '1667019026'.length);
+console.log('today getTime', today.getTime());
+console.log('today getDate', today.getDate());
+console.log('today getMonth', today.getMonth()); // coz it always starts from 0 to 11
+console.log('today getFullYear', today.getFullYear()); // coz it always starts from 0 to 11
+console.log('today getHours', today.getHours());
+console.log('today toLocaleDateString', today.toLocaleDateString());
+console.log('today toLocaleTimeString', today.toLocaleTimeString());
+
+console.log('today toIsoString', today.toISOString());
 
 console.log('getTime', (new Date().getTime() + '').length);
+console.log('passdate and time', new Date('2022-03-20'));
+
+var day1 = '2022-01-01';
+var day2 = '2022-02-01';
+var day3 = '2022-03-01';
+var day4 = '2022-06-01';
+
+let maxDate = Math.max(
+  new Date(day1).getTime(),
+  new Date(day2).getTime(),
+  new Date(day3).getTime(),
+  new Date(day4).getTime()
+);
+
+//TODO print minDate
+
+console.log(new Date(maxDate).toLocaleDateString('')); // m/d/y
+
+console.log(new Date(maxDate).toLocaleDateString('en-GB')); // d/m/y
