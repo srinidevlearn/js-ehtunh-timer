@@ -125,9 +125,32 @@ console.log(new Date(maxDate).toLocaleDateString('')); // m/d/y
 
 console.log(new Date(maxDate).toLocaleDateString('en-GB')); // d/m/y
 
-// TODO 
-// isdateRange 
+// TODO
+// isdateRange
 // StartRange->'2022-03-01', endRange->'2022-10-17'
 // input->'2022-05-01'
 
+var config = {
+  startDate: '2022-03-01',
+  endDate: '2022-10-17',
+};
 
+function isDateRange(config, input) {
+  /*
+
+  config &&
+  config.startDate &&
+  config.endDate &&
+  input
+  */
+
+  if (config && config.startDate && config.endDate && input) {
+    let start = new Date(config.startDate).getTime();
+    let end = new Date(config.endDate).getTime();
+    let isValidDate = new Date(input).getTime();
+    if (isValidDate > start && isValidDate < end) return true;
+    else return false;
+  } else return false;
+}
+
+console.log(isDateRange(config, '2022-11-10'));
